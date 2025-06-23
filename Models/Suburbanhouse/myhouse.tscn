@@ -1,0 +1,1192 @@
+[gd_scene load_steps=4 format=3 uid="uid://moj4vg03nq4j"]
+
+[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://Addons/proto_controller/proto_controller.tscn" id="1_8pequ"]
+
+[sub_resource type="Sky" id="Sky_noarx"]
+
+[sub_resource type="Environment" id="Environment_noarx"]
+background_mode = 2
+background_energy_multiplier = 6.32
+sky = SubResource("Sky_noarx")
+ambient_light_source = 3
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="Node3D" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.246971, 0.434748, 0, 0.869495, 0.493942, -0.5, 0.427766, -0.753005, 0, 0, 0)
+light_color = Color(1, 0.792157, 0.47451, 1)
+shadow_enabled = true
+directional_shadow_pancake_size = 18.0
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(0.527587, -0.807124, -0.264958, -0.786357, -0.58201, 0.207138, -0.321394, 0.0990687, -0.941749, -29.6, 77.5, -4.1)
+light_color = Color(1, 1, 0.52549, 1)
+light_energy = 1.242
+light_volumetric_fog_energy = 2.34
+shadow_enabled = true
+omni_range = 61.2
+omni_attenuation = 1.381
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_noarx")
+
+[node name="Car" type="CSGCombiner3D" parent="."]
+transform = Transform3D(0.779744, 0, -0.111901, 0, 0.77, 0, 0.13749, 0, 0.634622, -3.82445, 3.05051, 16.2968)
+use_collision = true
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Car"]
+size = Vector3(7.9, 2.1, 1.1)
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="Car"]
+transform = Transform3D(-0.0215262, -0.999063, 0.0375769, 0.991273, -0.0262176, -0.129194, 0.130058, 0.0344677, 0.990906, -0.853757, -1.26271, 2.24854)
+size = Vector3(0.3, 9.2, 5.5)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Car"]
+transform = Transform3D(-0.0200154, -0.533184, -0.845763, 0.00544898, 0.845861, -0.533375, 0.999785, -0.0152841, -0.0140247, -4.54243, 0.798784, 2.44823)
+size = Vector3(6.1, 0.1, 4.4)
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="Car"]
+transform = Transform3D(0.859257, -0.510411, -0.0340483, 0.507964, 0.859211, -0.0610622, 0.0604214, 0.0351728, 0.997553, -5.98934, -1.3091, 2.50914)
+size = Vector3(0.3, 2.5, 6)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Car"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8, -0.450001, 2.5)
+size = Vector3(0.1, 4.8, 6.1)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="Car"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.150001, -0.25, 4.95)
+size = Vector3(7.9, 2.1, 1.1)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Car"]
+transform = Transform3D(0.867318, -0.497747, -0.00267754, 0.497452, 0.866967, -0.0301467, 0.0173268, 0.0248148, 0.999542, -3.84312, -0.273471, -0.110399)
+size = Vector3(4.3, 2.4, 1)
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="Car"]
+transform = Transform3D(0.999846, 0.00242254, -0.0173922, -0.00285295, 0.999689, -0.0247691, 0.0173268, 0.0248148, 0.999542, -3.29555, -0.371498, 4.82345)
+size = Vector3(3.3, 2, 1)
+
+[node name="CSGCylinder3D4" type="CSGCylinder3D" parent="Car"]
+transform = Transform3D(1, 2.98023e-08, 2.98023e-08, -2.98023e-08, 1.04308e-07, 1, 2.98023e-08, -1, 7.45058e-08, 2.15, -1.45, -0.749998)
+radius = 1.0
+height = 0.8
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="Car"]
+transform = Transform3D(1, 2.98023e-08, 2.98023e-08, -2.98023e-08, 1.04308e-07, 1, 2.98023e-08, -1, 7.45058e-08, 2.65, -1.65, 6.05)
+radius = 1.0
+height = 0.8
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="Car"]
+transform = Transform3D(1, 2.98023e-08, 2.98023e-08, -2.98023e-08, 1.03316e-07, 1, 2.98023e-08, -1, 1.03316e-07, -2.25, -1.75, 5.35)
+radius = 1.0
+height = 0.8
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="Car"]
+transform = Transform3D(1, -2.98023e-08, 2.98023e-08, 2.98023e-08, -4.47035e-08, -1, 2.98023e-08, 1, -1.49012e-08, -2.75, -1.65, -0.550001)
+radius = 1.0
+height = 0.8
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Car"]
+transform = Transform3D(1, -4.47035e-08, -4.51162e-09, -1.49012e-08, 1, -2.98023e-08, 7.45058e-09, -1.49012e-08, 1, 0.55, 1.45, 2.5)
+size = Vector3(6.8, 1, 6.1)
+
+[node name="Tree2" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.69, 6.12, 14.72)
+use_collision = true
+radius = 1.8
+height = 11.8
+
+[node name="CSGSphere3D2" type="CSGSphere3D" parent="Tree2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.270001, 9.96, -0.639998)
+radius = 5.2
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree2/CSGSphere3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.63, 2.14, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree2/CSGSphere3D2/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.67, -0.360001, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.470001, -2.56, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, -1.46, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.03, 0.54, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 2.04, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.17, -1.66, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 2.54, -0.16)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, -1.66, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.33, -1.46, -3.96)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.429999, 1.94, -0.860001)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.97, -1.86, -1.56)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 3.34, 0.04)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 0.64, 4.54)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.53, -1.46, -4.96)
+radius = 2.8
+
+[node name="Tree2" type="CSGCylinder3D" parent="Tree2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.31, -0.580001, 14.72)
+radius = 1.8
+height = 11.8
+
+[node name="CSGSphere3D2" type="CSGSphere3D" parent="Tree2/Tree2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.270001, 9.96, -0.639998)
+radius = 5.2
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree2/Tree2/CSGSphere3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.63, 2.14, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree2/Tree2/CSGSphere3D2/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.67, -0.360001, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.470001, -2.56, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, -1.46, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.03, 0.54, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 2.04, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.17, -1.66, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 2.54, -0.16)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, -1.66, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.33, -1.46, -3.96)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.429999, 1.94, -0.860001)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.97, -1.86, -1.56)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 3.34, 0.04)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 0.64, 4.54)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.53, -1.46, -4.96)
+radius = 2.8
+
+[node name="Tree2" type="CSGCylinder3D" parent="Tree2/Tree2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.19, -4.68, 14.72)
+radius = 1.8
+height = 11.8
+
+[node name="CSGSphere3D2" type="CSGSphere3D" parent="Tree2/Tree2/Tree2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.270001, 9.96, -0.639998)
+radius = 5.2
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree2/Tree2/Tree2/CSGSphere3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.63, 2.14, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree2/Tree2/Tree2/CSGSphere3D2/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.67, -0.360001, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree2/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.470001, -2.56, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree2/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, -1.46, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree2/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.03, 0.54, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree2/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 2.04, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree2/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.17, -1.66, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree2/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 2.54, -0.16)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree2/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, -1.66, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree2/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.33, -1.46, -3.96)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree2/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.429999, 1.94, -0.860001)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree2/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.97, -1.86, -1.56)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree2/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 3.34, 0.04)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree2/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 0.64, 4.54)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree2/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.53, -1.46, -4.96)
+radius = 2.8
+
+[node name="Tree" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9, 3.3, -10.7)
+use_collision = true
+radius = 1.6
+height = 8.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.87, 6.14, -0.36)
+radius = 5.2
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.63, 2.14, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.67, -0.360001, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.470001, -2.56, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, -1.46, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.03, 0.54, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 2.04, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.17, -1.66, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 2.54, -0.16)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, -1.66, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.33, -1.46, -3.96)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.429999, 1.94, -0.860001)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.97, -1.86, -1.56)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 3.34, 0.04)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 0.64, 4.54)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.53, -1.46, -4.96)
+radius = 2.8
+
+[node name="Tree2" type="CSGCylinder3D" parent="Tree"]
+transform = Transform3D(0.34202, 0, 0.939693, 0, 1, 0, -0.939693, 0, 0.34202, 56.3101, 1.52, -5.4602)
+use_collision = true
+radius = 1.8
+height = 11.8
+
+[node name="CSGSphere3D2" type="CSGSphere3D" parent="Tree/Tree2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.270001, 9.96, -0.639998)
+radius = 5.2
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree2/CSGSphere3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.63, 2.14, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree2/CSGSphere3D2/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.67, -0.360001, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.470001, -2.56, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, -1.46, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.03, 0.54, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 2.04, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.17, -1.66, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 2.54, -0.16)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, -1.66, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.33, -1.46, -3.96)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.429999, 1.94, -0.860001)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.97, -1.86, -1.56)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 3.34, 0.04)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 0.64, 4.54)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.53, -1.46, -4.96)
+radius = 2.8
+
+[node name="CSGSphere3D2" type="CSGSphere3D" parent="Tree/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, -1.46, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.03, 0.54, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D2/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 2.04, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D2/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.17, -1.66, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 2.54, -0.16)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, -1.66, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.33, -1.46, -3.96)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.429999, 1.94, -0.860001)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.97, -1.86, -1.56)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 3.34, 0.04)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 0.64, 4.54)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.53, -1.46, -4.96)
+radius = 2.8
+
+[node name="Tree2" type="CSGCylinder3D" parent="Tree/Tree2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.31, -0.580001, 14.72)
+radius = 1.8
+height = 11.8
+
+[node name="CSGSphere3D2" type="CSGSphere3D" parent="Tree/Tree2/Tree2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.270001, 9.96, -0.639998)
+radius = 5.2
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree2/Tree2/CSGSphere3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.63, 2.14, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree2/Tree2/CSGSphere3D2/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.67, -0.360001, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.470001, -2.56, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, -1.46, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.03, 0.54, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 2.04, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.17, -1.66, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 2.54, -0.16)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, -1.66, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.33, -1.46, -3.96)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.429999, 1.94, -0.860001)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.97, -1.86, -1.56)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 3.34, 0.04)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 0.64, 4.54)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.53, -1.46, -4.96)
+radius = 2.8
+
+[node name="Tree2" type="CSGCylinder3D" parent="Tree/Tree2/Tree2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.19, -4.68, 14.72)
+radius = 1.8
+height = 11.8
+
+[node name="CSGSphere3D2" type="CSGSphere3D" parent="Tree/Tree2/Tree2/Tree2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.270001, 9.96, -0.639998)
+radius = 5.2
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree2/Tree2/Tree2/CSGSphere3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.63, 2.14, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree2/Tree2/Tree2/CSGSphere3D2/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.67, -0.360001, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree2/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.470001, -2.56, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree2/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, -1.46, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree2/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.03, 0.54, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree2/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 2.04, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree2/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.17, -1.66, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree2/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 2.54, -0.16)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree2/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, -1.66, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree2/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.33, -1.46, -3.96)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree2/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.429999, 1.94, -0.860001)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree2/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.97, -1.86, -1.56)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree2/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 3.34, 0.04)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree2/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 0.64, 4.54)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree2/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.53, -1.46, -4.96)
+radius = 2.8
+
+[node name="Tree" type="CSGCylinder3D" parent="Tree"]
+transform = Transform3D(0.34202, 0, 0.939693, 0, 1, 0, -0.939693, 0, 0.34202, 33.6799, 0.299999, -5.6198)
+use_collision = true
+radius = 1.6
+height = 8.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.87, 6.14, -0.36)
+radius = 5.2
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.63, 2.14, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.67, -0.360001, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.470001, -2.56, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, -1.46, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.03, 0.54, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 2.04, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.17, -1.66, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 2.54, -0.16)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, -1.66, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.33, -1.46, -3.96)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.429999, 1.94, -0.860001)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.97, -1.86, -1.56)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 3.34, 0.04)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 0.64, 4.54)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.53, -1.46, -4.96)
+radius = 2.8
+
+[node name="Tree3" type="CSGCylinder3D" parent="Tree"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.28158, -0.157374, -16.4673)
+use_collision = true
+radius = 1.6
+height = 8.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.87, 6.14, -0.36)
+radius = 5.2
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.63, 2.14, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.67, -0.360001, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.470001, -2.56, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, -1.46, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.03, 0.54, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 2.04, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.17, -1.66, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 2.54, -0.16)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, -1.66, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.33, -1.46, -3.96)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.429999, 1.94, -0.860001)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.97, -1.86, -1.56)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 3.34, 0.04)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 0.64, 4.54)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.53, -1.46, -4.96)
+radius = 2.8
+
+[node name="Tree2" type="CSGCylinder3D" parent="Tree/Tree3"]
+transform = Transform3D(0.34202, 0, 0.939693, 0, 1, 0, -0.939693, 0, 0.34202, 56.3101, 1.52, -5.4602)
+use_collision = true
+radius = 1.8
+height = 11.8
+
+[node name="CSGSphere3D2" type="CSGSphere3D" parent="Tree/Tree3/Tree2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.270001, 9.96, -0.639998)
+radius = 5.2
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree2/CSGSphere3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.63, 2.14, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree2/CSGSphere3D2/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.67, -0.360001, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.470001, -2.56, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, -1.46, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.03, 0.54, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 2.04, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.17, -1.66, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 2.54, -0.16)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, -1.66, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.33, -1.46, -3.96)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.429999, 1.94, -0.860001)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.97, -1.86, -1.56)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 3.34, 0.04)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 0.64, 4.54)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.53, -1.46, -4.96)
+radius = 2.8
+
+[node name="CSGSphere3D2" type="CSGSphere3D" parent="Tree/Tree3/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, -1.46, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.03, 0.54, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D2/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 2.04, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D2/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.17, -1.66, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 2.54, -0.16)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, -1.66, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.33, -1.46, -3.96)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.429999, 1.94, -0.860001)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.97, -1.86, -1.56)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 3.34, 0.04)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 0.64, 4.54)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.53, -1.46, -4.96)
+radius = 2.8
+
+[node name="Tree2" type="CSGCylinder3D" parent="Tree/Tree3/Tree2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.31, -0.580001, 14.72)
+radius = 1.8
+height = 11.8
+
+[node name="CSGSphere3D2" type="CSGSphere3D" parent="Tree/Tree3/Tree2/Tree2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.270001, 9.96, -0.639998)
+radius = 5.2
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree2/Tree2/CSGSphere3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.63, 2.14, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree2/Tree2/CSGSphere3D2/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.67, -0.360001, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.470001, -2.56, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, -1.46, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.03, 0.54, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 2.04, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.17, -1.66, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 2.54, -0.16)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, -1.66, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.33, -1.46, -3.96)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.429999, 1.94, -0.860001)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.97, -1.86, -1.56)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 3.34, 0.04)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 0.64, 4.54)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.53, -1.46, -4.96)
+radius = 2.8
+
+[node name="Tree2" type="CSGCylinder3D" parent="Tree/Tree3/Tree2/Tree2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.19, -4.68, 14.72)
+radius = 1.8
+height = 11.8
+
+[node name="CSGSphere3D2" type="CSGSphere3D" parent="Tree/Tree3/Tree2/Tree2/Tree2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.270001, 9.96, -0.639998)
+radius = 5.2
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree2/Tree2/Tree2/CSGSphere3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.63, 2.14, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree2/Tree2/Tree2/CSGSphere3D2/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.67, -0.360001, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree2/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.470001, -2.56, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree2/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, -1.46, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree2/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.03, 0.54, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree2/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 2.04, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree2/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.17, -1.66, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree2/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 2.54, -0.16)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree2/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, -1.66, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree2/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.33, -1.46, -3.96)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree2/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.429999, 1.94, -0.860001)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree2/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.97, -1.86, -1.56)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree2/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 3.34, 0.04)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree2/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 0.64, 4.54)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree2/Tree2/Tree2/CSGSphere3D2/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.53, -1.46, -4.96)
+radius = 2.8
+
+[node name="Tree" type="CSGCylinder3D" parent="Tree/Tree3"]
+transform = Transform3D(0.34202, 0, 0.939693, 0, 1, 0, -0.939693, 0, 0.34202, -16.0489, 1.096, 44.8612)
+use_collision = true
+radius = 1.6
+height = 8.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.87, 6.14, -0.36)
+radius = 5.2
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.63, 2.14, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.67, -0.360001, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.470001, -2.56, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.838291, -1.47828, 0.450777)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.03, 0.54, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 2.04, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.17, -1.66, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 2.54, -0.16)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, -1.66, 0.44)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.33, -1.46, -3.96)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.429999, 1.94, -0.860001)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.97, -1.86, -1.56)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 3.34, 0.04)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829999, 0.64, 4.54)
+radius = 2.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Tree/Tree3/Tree/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D/CSGSphere3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.53, -1.46, -4.96)
+radius = 2.8
+
+[node name="Steppingstones" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.585, -0.715542, 14.2502)
+use_collision = true
+radius = 2.1
+height = 5.75469
+
+[node name="Steppingstones" type="CSGCylinder3D" parent="Steppingstones"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.385, 0.977343, 0.650222)
+radius = 2.1
+height = 5.75469
+
+[node name="Ground" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 366.355, 0.648407, 37.4021)
+use_collision = true
+size = Vector3(2499.3, 1, 4695.3)
+
+[node name="Shack" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.4791, 2.92058, -2.25661)
+use_collision = true
+size = Vector3(0.2, 5.9, 8.9)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Shack"]
+transform = Transform3D(-0.973045, 0, -0.230616, 0, 1, 0, 0.230616, 0, -0.973045, -1.95185, -0.3, 7.21323)
+size = Vector3(4.5, 4.5, 4.7)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="Shack"]
+transform = Transform3D(-0.34202, 0, 0.939691, 0, 1, 0, -0.939691, 0, -0.34202, -1.11221, -1.45, 11.2812)
+size = Vector3(4.5, 2.6, 4.7)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Shack"]
+transform = Transform3D(0.116093, 0, -0.993238, 0, 1, 0, 0.993238, 0, 0.116093, -0.736507, 0.2, -7.1269)
+size = Vector3(0.2, 5.9, 12.5)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Shack/CSGBox3D4"]
+transform = Transform3D(-0.113283, -0.145087, -0.982912, -0.993524, 0.00779464, 0.113355, -0.0087848, 0.989388, -0.14503, 4.85013, 3, 2.7887)
+size = Vector3(0.2, 5.9, 12.5)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Shack"]
+transform = Transform3D(-0.116093, 0, 0.993238, 0, 1, 0, -0.993238, 0, -0.116093, -3.29188, 0.0499997, 4.28931)
+size = Vector3(0.2, 5.9, 6.5)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Shack"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -6.39999, 0.2, -0.949999)
+size = Vector3(0.2, 5.9, 11.2)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Shack"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8, 0.35, -2.25)
+size = Vector3(0.2, 5.9, 8.9)
+
+[node name="ProtoController" parent="." instance=ExtResource("1_8pequ")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.15996, 1.83069, 21.4722)
+can_sprint = true
+can_freefly = true
+input_left = "move_left"
+input_right = "move_right"
+input_forward = "move_forward"
+input_back = "move_backward"
+input_jump = "jump"
+
+[node name="SpotLight3D" type="SpotLight3D" parent="ProtoController"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00242805, 1.50919, -0.0021801)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -69.7255, 13.0127, 27.3015)
+use_collision = true
+size = Vector3(1, 25.1606, 38.0025)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62.3646, 13.1537, 8.62822)
+use_collision = true
+size = Vector3(15.9638, 24.9285, 1.10693)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.260948, -2.72024, 36.6112)
+size = Vector3(15.3943, 30.3246, 2.11511)
+
+[node name="Wall" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54.8745, 13.0192, 27.2254)
+use_collision = true
+size = Vector3(1, 25.1606, 38.0025)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.71306, -5.98755, 2.96237)
+operation = 2
+size = Vector3(5.97119, 12.9751, 6.94775)
+
+[node name="door" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54.3807, 6.77607, 30.1637)
+use_collision = true
+size = Vector3(0.001, 14.9154, 8.08508)
+
+[node name="CSGSphere3D2" type="CSGSphere3D" parent="door"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0615959, 2.79545, 0.437799)
+radius = 0.259404
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="door"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0367661, -2.84605, 1.64282)
+radius = 0.259404
